@@ -66,7 +66,7 @@ jobs:
     - uses: imranismail/setup-kustomize@v1
       with:
         kustomize-version: 3.8.6
-    - run: git clone https://${REPO_TOKEN}@github.com/gbaeke/realtimeapp-infra.git .
+    - run: git clone https://${REPO_TOKEN}@github.com/delivery-k8s-maksystem/realtimeapp-infra.git .
       env:
         REPO_TOKEN: ${{secrets.REPO_TOKEN}}
     - run: kustomize edit set image gbaeke/flux-rt:sha-$(git rev-parse --short $GITHUB_SHA)
@@ -89,7 +89,7 @@ jobs:
     - uses: imranismail/setup-kustomize@v1
       with:
         kustomize-version: 3.8.6
-    - run: git clone https://${REPO_TOKEN}@github.com/gbaeke/realtimeapp-infra.git .
+    - run: git clone https://${REPO_TOKEN}@github.com/delivery-k8s-maksystem/realtimeapp-infra.git .
       env:
         REPO_TOKEN: ${{secrets.REPO_TOKEN}}
     - run: kustomize edit set image gbaeke/flux-rt:${GITHUB_REF#refs/*/}

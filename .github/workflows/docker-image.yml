@@ -74,7 +74,7 @@ jobs:
     - run: git add .
     - run: |
         git config user.email "$EMAIL"
-        git config user.name "$GITHUB_ACTOR"
+        git config user.name "$ACTOR_GITHUB"
       env:
         EMAIL: ${{secrets.EMAIL}}
     - run: git commit -m "Set dev image tag to short sha"
@@ -97,7 +97,7 @@ jobs:
     - run: git add .
     - run: |
         git config user.email "$EMAIL"
-        git config user.name "$GITHUB_ACTOR"
+        git config user.name "$ACTOR_GITHUB"
       env:
         EMAIL: ${{secrets.EMAIL}}
     - run: git commit -m "Set prd image tag to latest tag"

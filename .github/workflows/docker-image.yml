@@ -73,8 +73,8 @@ jobs:
       working-directory: ./deploy/overlays/dev
     - run: git add .
     - run: |
-        git config user.email "$EMAIL"
-        git config user.name "$ACTOR_GITHUB"
+        git config user.email "delivery-k8s-maksystem"
+        git config user.name "delivery.k8s.maksystem@gmail.com"
       env:
         EMAIL: ${{secrets.EMAIL}}
     - run: git commit -m "Set dev image tag to short sha"
